@@ -1,0 +1,38 @@
+<div class="{{global.state['theme']}}">
+
+	<ion-menu [content]="content">
+	  <ion-header>
+		<ion-toolbar>
+		  <ion-title>Menu</ion-title>
+		</ion-toolbar>
+	  </ion-header>
+	  
+	   <ion-content class="card-background-page">
+		<div class="menu-header">
+		  <!--material-design-background-->
+		  <img class="user-avatar round" [src]="userImage || placeholder" onerror="this.src='assets/images/user.png'" />
+		  <div class="card-title">T-WORK SYSTEM</div>
+		<h4 class="email">{{username}}</h4>
+		</div>
+		
+		<ion-list>
+			
+			<button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+				{{p.title}}
+			</button>
+			
+			<div padding>
+				<button menuClose ion-button block icon-left class="menu-login-button" (click)="doLogout()">
+				<ion-icon name="log-in"></ion-icon>
+				<span>LOGOUT</span>
+				</button>
+			</div>
+			
+		</ion-list>
+	  </ion-content>
+
+	</ion-menu>
+
+	<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+	<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+</div>

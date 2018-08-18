@@ -1,0 +1,65 @@
+page-theming {
+	ion-content {
+		button.dark-theme {
+			border-radius: 50%;
+			background-color: black !important;
+		}
+		
+		button.red-theme {
+			border-radius: 50%;
+			background-color: red !important;
+		}
+		
+		button.darkblue-theme {
+			border-radius: 50%;
+			background-color: #00008b !important;
+		}
+		
+		button.blue-theme {
+			border-radius: 50%;
+			background-color: blue !important;
+		}
+		
+		button.bloodyred-theme {
+			border-radius: 50%;
+			background-color: #660000 !important;
+		}
+		
+		button.green-theme {
+			border-radius: 50%;
+			background-color: #52e231 !important;
+		}
+		
+		button.cyan-theme {
+			border-radius: 50%;
+			background-color: #00FFFF !important;
+		}
+		
+		button.yellow-theme {
+			border-radius: 50%;
+			background-color: #fffa11 !important;
+		}
+		
+		button.orange-theme {
+			border-radius: 50%;
+			background-color: orange !important;
+		}
+		
+		button.purple-theme {
+			border-radius: 50%;
+			background-color: purple !important;
+		}
+		
+		button.grey-theme {
+			border-radius: 50%;
+			background-color: #878787 !important;
+		}
+		
+		button.default-theme {
+			border-radius: 50%;
+			background-color: white !important;
+			border: 1px solid #cdcdcd;
+		}
+		
+	}
+}

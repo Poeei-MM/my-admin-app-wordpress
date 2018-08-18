@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+   <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+   </button>
+   
+    <ion-title>Products</ion-title>
+  
+
+  	<ion-buttons end>
+		
+		<button ion-button (click)="addProduct()">
+			<ion-icon name="add-circle"></ion-icon>
+		</button>
+	</ion-buttons>
+
+	</ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-row wrap>
+	  <ion-col no-padding col-6 *ngFor="let item of items">  
+		  <ion-card (tap)="itemTapped($event, item)">	
+			 <ion-thumbnail item-start *ngIf="item.images">
+				<img src="{{item.images[0].src}}">
+			 </ion-thumbnail>
+			<div class="product-text">
+				<h2 *ngIf="item.name" [innerHTML]="item.name"></h2>
+			
+				<div *ngIf="item.regular_price == item.price">
+					<p><span style="color: blue; font-size: 18px; font-weight: bold; font-family: 'Signika';">Sale! </span> {{item.regular_price}}</p>
+				</div>
+			
+				<div *ngIf="item.regular_price != item.price">
+					<p><span style="color: blue; font-size: 16px; font-weight: bold; font-family: 'Signika';">Price >> </span> <span class="product-price">{{item.regular_price}}</span></p>
+					<p><span style="color: blue; font-size: 18px; font-weight: bold; font-family: 'Signika';">Sale! </span> {{item.price}}</p>
+				</div>
+			</div>
+		
+		</ion-card>
+	  </ion-col>
+  </ion-row>
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+	<button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Theming</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<button ion-button large class="dark-theme" (click)="changeTheme('theme-dark')"></button>
+	<button ion-button large class="bloodyred-theme" (click)="changeTheme('theme-bloodyred')"></button>
+	<button ion-button large class="red-theme" (click)="changeTheme('theme-red')"></button>
+	<button ion-button large class="darkblue-theme" (click)="changeTheme('theme-darkblue')"></button>
+	<button ion-button large class="blue-theme" (click)="changeTheme('theme-blue')"></button>
+	<button ion-button large class="cyan-theme" (click)="changeTheme('theme-cyan')"></button>
+	<button ion-button large class="green-theme" (click)="changeTheme('theme-green')"></button>
+	<button ion-button large class="yellow-theme" (click)="changeTheme('theme-yellow')"></button>
+	<button ion-button large class="orange-theme" (click)="changeTheme('theme-orange')"></button>
+	<button ion-button large class="purple-theme" (click)="changeTheme('theme-purple')"></button>
+	<button ion-button large class="grey-theme" (click)="changeTheme('theme-grey')"></button>
+	<button ion-button large class="default-theme" (click)="changeTheme('')"></button>
+</ion-content>
